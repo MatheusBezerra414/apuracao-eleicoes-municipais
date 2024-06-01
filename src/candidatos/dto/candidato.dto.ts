@@ -1,6 +1,5 @@
 export class CandidatoDTO {
   readonly nome: string;
-  readonly partido: string;
   readonly cargo: string;
   readonly numero: string;
   readonly origem: {
@@ -11,4 +10,5 @@ export class CandidatoDTO {
   readonly sexo: string;
   readonly isEleito: boolean;
   readonly votos: number;
+  readonly imagem: string;
 }

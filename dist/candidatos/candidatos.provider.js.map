@@ -1,0 +1,1 @@
+{"version":3,"file":"candidatos.provider.js","sourceRoot":"","sources":["../../src/candidatos/candidatos.provider.ts"],"names":[],"mappings":";;;AACA,2DAAuD;AAE1C,QAAA,kBAAkB,GAAG;IAChC;QACE,OAAO,EAAE,kBAAkB;QAC3B,UAAU,EAAE,CAAC,QAAkB,EAAE,EAAE,CACjC,QAAQ,CAAC,KAAK,CAAC,WAAW,EAAE,oCAAgB,CAAC;QAC/C,MAAM,EAAE,CAAC,qBAAqB,CAAC;KAChC;CACF,CAAC"}

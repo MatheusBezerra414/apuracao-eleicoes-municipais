@@ -105,7 +105,7 @@ export class CandidatosService {
     }
   }
 
-  async findCandidato(id: any): Promise<Candidato> {
+  async findCandidato(id: string): Promise<Candidato> {
     try {
       const candidato = await this.candidatoModel.findById(id);
       return candidato;
@@ -117,11 +117,10 @@ export class CandidatosService {
     }
   }
 
-  async updateCandidato(id: any, candidato: CandidatoDTO): Promise<Candidato> {
+  async updateCandidato(id: string, candidato: CandidatoDTO): Promise<Candidato> {
     try {
       const update = {
         nome: candidato.nome,
-        partido: candidato.partido,
         cargo: candidato.cargo,
         numero: candidato.numero,
         origem: {
@@ -132,6 +131,7 @@ export class CandidatosService {
         sexo: candidato.sexo,
         isEleito: candidato.isEleito,
         votos: candidato.votos,
+        imagem: candidato.imagem
       };
       const novoCandidato = await this.candidatoModel.findOneAndUpdate(
         {
@@ -156,8 +156,9 @@ export class CandidatosService {
       return await this.candidatoModel.create(candidato);
     } catch (err) {
       throw new HttpException(
-        `Erro ao criar candidato`,
+        `Erro ao criar candidato: ${err}`,
         HttpStatus.INTERNAL_SERVER_ERROR,
+        
       );
     }
   }

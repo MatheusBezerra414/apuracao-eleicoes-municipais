@@ -14,4 +14,5 @@ export const CandidatosSchema = new mongoose.Schema({
   sexo: { type: String, enum: Sexo },
   isEleito: { type: Boolean, default: false },
   votos: Number,
+  imagem: {type: String},
 });
